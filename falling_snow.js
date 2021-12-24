@@ -14,13 +14,16 @@ var snowParents;
             })
             .done(function (experience) {
                 window.myExperience = experience;
+                console.log('works0')
 
                 experience.on(CerosSDK.EVENTS.PAGE_CHANGED, snowPageChangedCallback);
                 function snowPageChangedCallback(){
+                    console.log('works1')
                     snowArrey = []
                     creatingSnow()
+                    console.log('works2')
                 }
-                snowPageChangedCallback()
+                snowPageChangedCallback
             })
     });
 })();
