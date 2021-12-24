@@ -1,5 +1,4 @@
 var snowArrey = [];
-var snowParents;
 (function(){
     'use strict';
     require.config({
@@ -29,7 +28,8 @@ var snowParents;
 })();
 
 function creatingSnow(){
-    snowParents = document.getElementsByClassName("snow-parent");
+    var snowParents = document.getElementsByClassName("snow-parent");
+    console.log(snowParents)
     for(let i = 0; i < snowParents.length; i++){
         snowArrey.push(new Snow(i));
     }
