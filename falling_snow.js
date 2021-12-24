@@ -28,8 +28,8 @@ var snowArrey = [];
 })();
 
 function creatingSnow(){
-    var snowParents = document.querySelectorAll(".snow-parent");
-    console.log(snowParents.length)
+    var snowParents = $(document.querySelectorAll(".snow-parent")).toArray();
+    console.log(snowParents)
     for(let i = 0; i < snowParents.length; i++){
         snowArrey.push(new Snow(i));
     }
