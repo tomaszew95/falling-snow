@@ -23,7 +23,7 @@ var snowParents;
                     creatingSnow()
                     console.log('works2')
                 }
-                snowPageChangedCallback
+                snowPageChangedCallback()
             })
     });
 })();
