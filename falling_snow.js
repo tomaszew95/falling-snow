@@ -1,4 +1,4 @@
-var snowArrey = [];
+var snowArrey;
 var snowParents;
 (function(){
     'use strict';
@@ -14,13 +14,13 @@ var snowParents;
             })
             .done(function (experience) {
                 window.myExperience = experience;
-                console.log('works')
 
                 experience.on(CerosSDK.EVENTS.PAGE_CHANGED, snowPageChangedCallback);
                 function snowPageChangedCallback(){
-                    console.log('new')
+                    snowArrey = []
                     creatingSnow()
                 }
+                snowPageChangedCallback()
             })
     });
 })();
