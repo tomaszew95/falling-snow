@@ -1,4 +1,4 @@
-var snowArrey;
+var snowArrey = [];
 var snowParents;
 (function(){
     'use strict';
