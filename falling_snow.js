@@ -28,7 +28,7 @@ var snowArrey = [];
 })();
 
 function creatingSnow(){
-    var snowParents = document.getElementsByClassName("snow-parent");
+    var snowParents = document.querySelectorAll(".snow-parent");
     console.log(snowParents.length)
     for(let i = 0; i < snowParents.length; i++){
         snowArrey.push(new Snow(i));
