@@ -1,4 +1,4 @@
-let snowArrey, snowParents
+let snowArrey, snowParents;
 (function(){
     'use strict';
     require.config({
@@ -13,9 +13,11 @@ let snowArrey, snowParents
             })
             .done(function (experience) {
                 window.myExperience = experience
+                console.log('works0')
 
                 experience.on(CerosSDK.EVENTS.PAGE_CHANGED, snowPageChangedCallback);
                 function snowPageChangedCallback(){
+                    console.log('works1')
                     snowArrey = []
                     creatingSnow()
                 }
@@ -30,6 +32,7 @@ function creatingSnow(){
         if(snowParents[i].children.length === 0)
         continue
         snowArrey.push(new Snow(i))
+        console.log('works2')
     }
 }
 
