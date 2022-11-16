@@ -13,11 +13,9 @@ let snowArrey, snowParents;
             })
             .done(function (experience) {
                 window.myExperience = experience
-                console.log('works0')
 
                 experience.on(CerosSDK.EVENTS.PAGE_CHANGED, snowPageChangedCallback);
                 function snowPageChangedCallback(){
-                    console.log('works1')
                     snowArrey = []
                     creatingSnow()
                 }
@@ -29,10 +27,9 @@ let snowArrey, snowParents;
 function creatingSnow(){
     snowParents = document.getElementsByClassName("snow-parent")
     for(let i = 0; i < snowParents.length; i++){
-        if(snowParents[i].children.length === 0)
+        if(snowParents[i].children.length !== 0)
         continue
         snowArrey.push(new Snow(i))
-        console.log('works2')
     }
 }
 
